@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image:url(https://wallpaperaccess.com/full/8111971.jpg);">
+    <center>
+        <h1 style="background-color: rgb(255, 6, 6)" >PLEASE SELECT YOUR NAME</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+                <select name="sn" id="sn">
+                    {% for i in SO %}
+                            <option value="{{i}}">{{i.student_name}}</option>
+                    {% endfor %}
+                </select>
+
+            <input style="background-color:skyblue"type="submit" value="Select">
+        </form>
+    </center>
+</body>
+</html>

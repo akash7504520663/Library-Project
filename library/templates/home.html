@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image:url(https://res.cloudinary.com/practicaldev/image/fetch/s--IgmKjf7l--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/w41ls0p1u5daw35e2v7o.jpg);">
+
+    <center>
+        <h1>WELCOME TO HOME PAGE {{name}}</h1>
+
+        <h2>THESE ARE THE BOOKS WHICH ARE AVAILABLE IN OUR LIBRARY </h2>
+
+        <table style="background-color:white ;" border="9px">
+            <tr>
+                <th>BOOK NAME</th>
+                <th>BOOK AURTHOR</th>
+            </tr>
+            {% for i in BO %}
+                    <tr>
+                        <td>{{i.book_name}}</td>
+                        <td>{{i.author}}</td>
+                    </tr>
+            {% endfor %}
+        </table>
+    </center>
+    
+</body>
+</html>
